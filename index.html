@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影视天堂 - 最新电影推荐</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-film"></i>
+                <span>影视天堂</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
+                <li class="nav-item"><a href="#movies" class="nav-link">电影</a></li>
+                <li class="nav-item"><a href="#series" class="nav-link">电视剧</a></li>
+                <li class="nav-item"><a href="#genres" class="nav-link">分类</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">关于</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主横幅 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">发现精彩电影世界</h1>
+            <p class="hero-subtitle">探索最新、最热门的电影和电视剧</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索电影、演员或导演...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- 热门电影区域 -->
+    <section id="movies" class="featured-movies">
+        <div class="container">
+            <h2 class="section-title">热门电影</h2>
+            <div class="movie-categories">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="action">动作</button>
+                <button class="category-btn" data-category="comedy">喜剧</button>
+                <button class="category-btn" data-category="drama">剧情</button>
+                <button class="category-btn" data-category="horror">恐怖</button>
+                <button class="category-btn" data-category="romance">爱情</button>
+            </div>
+            <div class="movies-grid" id="moviesGrid">
+                <!-- 电影卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 电视剧区域 -->
+    <section id="series" class="tv-series">
+        <div class="container">
+            <h2 class="section-title">热门电视剧</h2>
+            <div class="series-grid" id="seriesGrid">
+                <!-- 电视剧卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类区域 -->
+    <section id="genres" class="genres-section">
+        <div class="container">
+            <h2 class="section-title">热门分类</h2>
+            <div class="genres-grid">
+                <div class="genre-card" data-genre="action">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>动作片</h3>
+                    <p>刺激惊险的动作大片</p>
+                </div>
+                <div class="genre-card" data-genre="comedy">
+                    <i class="fas fa-laugh"></i>
+                    <h3>喜剧片</h3>
+                    <p>轻松幽默的喜剧电影</p>
+                </div>
+                <div class="genre-card" data-genre="drama">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>剧情片</h3>
+                    <p>深刻感人的剧情故事</p>
+                </div>
+                <div class="genre-card" data-genre="horror">
+                    <i class="fas fa-ghost"></i>
+                    <h3>恐怖片</h3>
+                    <p>惊悚刺激的恐怖电影</p>
+                </div>
+                <div class="genre-card" data-genre="romance">
+                    <i class="fas fa-heart"></i>
+                    <h3>爱情片</h3>
+                    <p>浪漫温馨的爱情故事</p>
+                </div>
+                <div class="genre-card" data-genre="sci-fi">
+                    <i class="fas fa-rocket"></i>
+                    <h3>科幻片</h3>
+                    <p>未来世界的科幻冒险</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">关于影视天堂</h2>
+                <p>影视天堂致力于为您提供最新、最全面的电影和电视剧信息。我们精心挑选每一部作品，为您带来最佳的观影体验。</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h3>精选推荐</h3>
+                        <p>专业团队精心挑选优质影片</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h3>实时更新</h3>
+                        <p>第一时间更新最新影片信息</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>社区互动</h3>
+                        <p>与其他影迷分享观影心得</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-film"></i>
+                        <span>影视天堂</span>
+                    </div>
+                    <p>发现精彩电影世界，享受优质观影体验</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#movies">电影</a></li>
+                        <li><a href="#series">电视剧</a></li>
+                        <li><a href="#genres">分类</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>分类</h3>
+                    <ul>
+                        <li><a href="#">动作片</a></li>
+                        <li><a href="#">喜剧片</a></li>
+                        <li><a href="#">剧情片</a></li>
+                        <li><a href="#">科幻片</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@movieheaven.com</li>
+                        <li><i class="fas fa-phone"></i> +86 400-123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市朝阳区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 影视天堂. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 电影详情模态框 -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- 电影详情内容将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
